@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[如何使用github发布静态页面]]></title>
+    <url>%2F2019%2F01%2F07%2F2%2F</url>
+    <content type="text"><![CDATA[怎样在github上发布静态页面呢？方法其实很简单，利用gh-pages分支即可实现。下面我将一步步教大家如何操作（首先自己得有一个github账号和git工具）。 步骤1： 在需要发布的文件夹对应位置打开命令行： 步骤2： 初始化控制仓库：git init，这时文件中会多了一个.git文件： 步骤3： 将我们需要的文件添加到仓库中：git add --all（全部添加） 拓展：这个警告说明windows里文件的回车换行符和ninux里的不一样。git命令会将换行符统一变成ninux的换行符。 步骤4： 将需要提交的文件commit一下（仅仅提交在本地）： 步骤5： 在github上new一个仓库： 步骤6： 根据github官网，添加仓库的地址，将本地仓库里的文件push到github上的master（默认分支）中： 步骤7： 在远端（remote）创建一个新的分支（branch），固定名gh-pages，本地切换到gh-pages分支，将本地commit提交的东西push到远端的gh-pages分支上： 这样站点就创建好了。]]></content>
+      <categories>
+        <category>github</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[如何快速搭建免费个人博客]]></title>
+    <url>%2F2019%2F01%2F04%2F1%2F</url>
+    <content type="text"><![CDATA[前提准备：我们的博客网站是基于github，所以我们需要一个github账号，账号名很重要（当时很后悔）。 步骤1：创建一个Github仓库(repository) ，自已仓库名必须是注册的账号名username + .github + .io。（username就是你前面的owner）这样我们访问博客的时候就可以直接以https://useranme.github.io/进行访问。步骤2：安装环境和框架 安装node环境：在nodeJs官网（https://nodejs.org/en/ ）下载安装即可。安装完成打开控制台输入：node -v，如果在控制台出现node的版本号就表示安装成功。我的node版本是v9.11.1。 安装git bash。在官网（https://git-scm.com/downloads）下载，并安装。同样安装完毕之后控制台输入：git --version，如果安装成功控制台输出： 为什么要装git呢？因为后面我们本地建的博客最终需要上传到github上供别人浏览的。 node和git安装完成之后，就可以安装Hexo，最流行的博客框架。windows系统下直接打开控制台输入：npm install hexo-cli -g，（node自带npm工作，一个包管理工作），npm有时下载会比较慢，可以用国内的一个镜像cnpm，安装也很简单：npm install -g cnpm --registry=https://registry.npm.taobao.org，或者大家网上搜一下安装教程，很简单。hexo-cli是hexo的脚手架，可以帮助我们快速的建立一个博客框架，并进行本地调试。 步骤3： 编写博客，发布到github 新建博客： 打开控制台输入：hexo init username.github.io，它会在控制台当前位置新建一个名为username.github.io文件夹。 更改默认配置（包括主题+配置）： 首先切换到username.github.io：cd username.github.io，然后clone一个hexo中比较流行的主体：git clone https://github.com/iissnan/hexo-theme-next themes/next，不过hexo也有更多的主题供你选择。 hexo的基础配置：打开username.github.io文件夹下的_config.yml文件，进行相应的参数配置（必要的配置，其他的可选，更多配置可参考hexo官网配置）： next主题的配置（next主题配置文件在carreyWang.github.io\themes\next下的_config.yml中），配置参考官网即可，这边我只是简单的改了一下Schemes： 写博客： 在username.github.io/source/_posts下创建自己的第一个博客，例如，创建一个名为First.md的文件，然后基于markdown语法进行文章的书写，这是我的： 本地测试： 在控制台运行hexo s命令，测试服务启动，你可以在浏览器中输入https://localhost:4000 访问了。 安装发布工具并发布： 本地测试没有问题之后，首先安装hexo-deployer-git自动部署发布工具：cnpm install hexo-deployer-git --save，（cnpm是淘宝镜像的命令）记住当前控制台路径是在carreyWang.github.io下。安装完毕之后，就可以发布我们的博客了。顺序执行命令：hexo clean，hexo g，hexo d，这里有的人在执行hexo d命令的时候会出现下图的错误： 解决方法：把_config.yml中的git仓库链接改成了ssh链接，然后再给自己的git账户增加了ssh key。这样以后上传代码也很方便。具体的ssh配置方法网上有很多。 这样问题就解决了，也成功发布了。 仓库设置GitHub Pages： 打开github仓库username.github.io，如果之前的操作都没有问题，此时应该是这样的： 打开仓库的setting，拉到GitHub Pages，设置source为master brance，然后现在一个theme，保存，此时github会有一个成功提示： 大功告成，打开浏览器输入https://username.github.io，见证奇迹的时候到了： 这里只说到了简单的博客创建流程，还有很多很好玩的hexo配置与插件。比如说评论、标签、统计等等。大家可以根据需求自己继续完善。]]></content>
+      <categories>
+        <category>github</category>
+      </categories>
+      <tags>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+</search>
