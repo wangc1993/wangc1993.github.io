@@ -483,7 +483,7 @@
 <li>写博客：<br> 在username.github.io/source/_posts下创建自己的第一个博客，例如，创建一个名为First.md的文件，然后基于markdown语法进行文章的书写，这是我的： <div align="center"><img src="/2019/01/04/1/8.png"></div></li>
 <li>本地测试：<br> 在控制台运行<code>hexo s</code>命令，测试服务启动，你可以在浏览器中输入<a href="https://localhost:4000" target="_blank" rel="noopener">https://localhost:4000</a> 访问了。</li>
 <li>安装发布工具并发布：<br> 本地测试没有问题之后，首先安装<a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a>自动部署发布工具：<code>cnpm install hexo-deployer-git --save</code>，（cnpm是淘宝镜像的命令）记住当前控制台路径是在carreyWang.github.io下。安装完毕之后，就可以发布我们的博客了。顺序执行命令：<code>hexo clean</code>，<code>hexo g</code>，<code>hexo d</code>，这里有的人在执行<code>hexo d</code>命令的时候会出现下图的错误：<br> <div align="center"><img src="/2019/01/04/1/9.png"></div><br> 解决方法：把_config.yml中的git仓库链接改成了ssh链接，然后再给自己的git账户增加了ssh key。这样以后上传代码也很方便。具体的ssh<a href="https://blog.csdn.net/gulingfengze/article/details/69665223" target="_blank" rel="noopener">配置方法</a>网上有很多。<br> 这样问题就解决了，也成功发布了。</li>
-<li>仓库设置GitHub Pages：<br> 打开github仓库username.github.io，如果之前的操作都没有问题，此时应该是这样的：<br> <div align="center"><img src="/2019/01/04/1/10.png"></div><br> 打开仓库的setting，拉到GitHub Pages，设置source为master brance，然后现在一个theme，保存，此时github会有一个成功提示：<br> <div align="center"><img src="/2019/01/04/1/11.png"></div><br><strong>大功告成，打开浏览器输入</strong><a href="https://wangc1993.github.io/" target="_blank" rel="noopener">https://username.github.io</a>，见证奇迹的时候到了：</li>
+<li>仓库设置GitHub Pages：<br> 打开github仓库username.github.io，如果之前的操作都没有问题，此时应该是这样的：<br> <div align="center"><img src="/2019/01/04/1/10.png"></div><br> 打开仓库的setting，拉到GitHub Pages，设置source为master brance，然后现在一个theme，保存，此时github会有一个成功提示：<br> <div align="center"><img src="/2019/01/04/1/11.png"></div><br><strong>大功告成，打开浏览器输入</strong><a href="https://wangc1993.github.io/">https://username.github.io</a>，见证奇迹的时候到了：</li>
 </ol>
 </blockquote>
 <p><div align="center"><img src="/2019/01/04/1/12.png"></div><br>这里只说到了简单的博客创建流程，还有很多很好玩的hexo<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">配置</a>与<a href="https://hexo.io/plugins/" target="_blank" rel="noopener">插件</a>。比如说评论、标签、统计等等。大家可以根据需求自己继续完善。</p>
@@ -606,7 +606,7 @@
   </script>
 
 <script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
 </script>
 
       
@@ -677,7 +677,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
