@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[算法图解之二分查找]]></title>
+    <url>%2F2019%2F01%2F17%2F11%2F</url>
+    <content type="text"><![CDATA[什么是二分查找首先我们通过以下假设来了解一下： 假设要在电话簿中找一个名字以K打头的人，（现在谁还用电话簿！）可以从头开始翻页，直到进入以K打头的部分。但你很可能不这样做，而是从中间开始，因为你知道以K打头的名字在电话簿中间。 假设你登录Facebook。当你这样做时，Facebook必须核实你是否有其网站的账户，因此必须在其数据库中查找你的用户名。如果你的用户名为karlmageddon，Facebook可从以A打头的部分开始查找，但更合乎逻辑的做法是从中间开始查找。 这是一个查找问题，在前述所有情况下，都可使用同一种算法来解决问题，这种算法就是二分查找 。二分查找是一种算法，其输入是一个有序的元素列表。如果要查找的元素包含在列表中，二分查找返回其位置；否则返回null。 工作原理下面的示例说明了二分查找的工作原理。随便想一个1～100的数字。你的目标是以最少的次数猜到这个数字。我们跳过傻找的方式，直接进入二分查找：50》25》13》7》4》2》1。不管我心里想的是哪个数字，你在7次之内都能猜到，因为每次猜测都将排除很多数字！！一般而言，对于包含n 个元素的列表，用二分查找最多需要log2n步，而简单查找最多需要n步。 代码实现下面来看看如何编写执行二分查找的Js代码： 函数binary_search接受一个有序数组和一个元素。如果指定的元素包含在数组中，这个函数将返回其位置。你将跟踪要在其中查找的数组部分——开始时为整个数组。 每次都检查中间的元素：mid = (low + high) / 2 ←—如果(low + high)不是偶数，向下取整。 如果猜的数字小了，就相应地修改low：low = mid + 1。如果猜的数字大了，就修改high：high = mid - 1。 下面是具体的实现代码：]]></content>
+      <categories>
+        <category>算法图解</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>二分查找</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo-NexT添加热度、阅读量排行]]></title>
     <url>%2F2019%2F01%2F12%2F10%2F</url>
     <content type="text"><![CDATA[LeanCloud注册 去LeanCloud进行注册（支持第三方登录），创建一个新应用，点击新建应用，点击存储，新建一个class，class名一定要是Counter，其他默认就好，否则会报错哦（next默认）： 添加ID和KEY 点击设置到应用Key，复制app id与app key，打开主题配置文件_config.yml，搜索leancloud_visitors，进行如下设置： 接着，打开/themes/next/languages/zh-Hans.yml，搜索visitors，将阅读次数改为当前热度即可。最后打开/themes/next/layout/_macro/post.swig，搜索leancloud-visitors-count，在其后增加如下代码： 新增热度排行页面 新建页面,首先执行：hexo n page hot新建一个hot页面，编辑其中自动生成的 index.md 文件，将其中的代码替换如下：123456789101112131415161718192021222324&lt;div id=&quot;hot&quot;&gt;&lt;/div&gt;&lt;script src=&quot;https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js&quot;&gt;&lt;/script&gt;&lt;script&gt;AV.initialize(&quot;leancloud_appid&quot;, &quot;leancloud_appkey&quot;);&lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt; var time=0 var title=&quot;&quot; var url=&quot;&quot; var query = new AV.Query(&apos;Counter&apos;); query.notEqualTo(&apos;id&apos;,0); query.descending(&apos;time&apos;); query.limit(1000); query.find().then(function (todo) &#123; for (var i=0;i&lt;1000;i++)&#123; var result=todo[i].attributes; time=result.time; title=result.title; url=result.url; var content=&quot;&lt;p&gt;&quot;+&quot;&lt;font color=&apos;#1C1C1C&apos;&gt;&quot;+&quot;【文章热度:&quot;+time+&quot;℃】&quot;+&quot;&lt;/font&gt;&quot;+&quot;&lt;a href=&apos;&quot;+&quot;https://wangc1993.github.io/&quot;+url+&quot;&apos;&gt;&quot;+title+&quot;&lt;/a&gt;&quot;+&quot;&lt;/p&gt;&quot;; document.getElementById(&quot;hot&quot;).innerHTML+=content &#125; &#125;, function (error) &#123; console.log(&quot;error&quot;); &#125;);&lt;/script&gt; 并将其中的leancloud_appid、leancloud_appkey和页面地址替换为你的。 配置主题，同样打开themes\next_config.yml，搜索menu，添加hot: /hot/ || signal。 配置其中文对应，打开hexo/theme/next/languages/zh-Hans.yml，搜索menu，添加hot: 热度排行。 设置域名 回到LeanCloud后台，点击设置，到安全中心，添加安全域名，就是你博客的域名，这是为了在本地测试的时候不影响热度。大功告成！]]></content>
