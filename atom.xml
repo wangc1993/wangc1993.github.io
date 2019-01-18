@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangc1993.github.io/"/>
-  <updated>2019-01-17T08:31:52.710Z</updated>
+  <updated>2019-01-18T02:55:05.318Z</updated>
   <id>https://wangc1993.github.io/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法图解之递归</title>
+    <link href="https://wangc1993.github.io/2019/01/18/13/"/>
+    <id>https://wangc1993.github.io/2019/01/18/13/</id>
+    <published>2019-01-18T02:22:41.000Z</published>
+    <updated>2019-01-18T02:55:05.318Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="什么是递归"><a href="#什么是递归" class="headerlink" title="什么是递归"></a>什么是递归</h1><p>假设你在祖母的阁楼中翻箱倒柜，发现了一个上锁的神秘手提箱。祖母告诉你，钥匙很可能在下面这个盒子里。你如何找到它：</p><div align="center"><img src="/2019/01/18/13/1.png"></div><p>(1)检查盒子中的每样东西。<br>(2)如果是盒子，就回到第一步。<br>(3)如果是钥匙，就大功告成！<br>递归只是让解决方案更清晰，并没有性能上的优势。实际上，在有些情况下，使用循环的性能更好。</p><h1 id="递归条件"><a href="#递归条件" class="headerlink" title="递归条件"></a>递归条件</h1><p>每个递归函数都有两部分：基线条件 （base case）和递归条件 （recursive<br>case）。递归条件指的是函数调用自己，而基线条件则指的是函数不再调用自己，从而避免形成无限循环。</p><div align="center"><img src="/2019/01/18/13/2.png"></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;什么是递归&quot;&gt;&lt;a href=&quot;#什么是递归&quot; class=&quot;headerlink&quot; title=&quot;什么是递归&quot;&gt;&lt;/a&gt;什么是递归&lt;/h1&gt;&lt;p&gt;假设你在祖母的阁楼中翻箱倒柜，发现了一个上锁的神秘手提箱。祖母告诉你，钥匙很可能在下面这个盒子里。你如何找到它：&lt;/
+      
+    
+    </summary>
+    
+      <category term="算法图解" scheme="https://wangc1993.github.io/categories/%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3/"/>
+    
+    
+      <category term="算法" scheme="https://wangc1993.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="递归" scheme="https://wangc1993.github.io/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法图解之选择排序</title>
+    <link href="https://wangc1993.github.io/2019/01/18/12/"/>
+    <id>https://wangc1993.github.io/2019/01/18/12/</id>
+    <published>2019-01-18T02:10:59.000Z</published>
+    <updated>2019-01-18T02:23:50.964Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h1><p>每次选出最小/最大的，放到一个新数组中，接着继续寻找剩下的元素中的最小的，以此类推。</p><h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><div align="center"><img src="/2019/01/18/12/1.png"></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h1&gt;&lt;p&gt;每次选出最小/最大的，放到一个新数组中，接着继续寻找剩下的元素中的最小的，以此类推。&lt;/p&gt;
+&lt;h1 id=&quot;代码实现&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="算法图解" scheme="https://wangc1993.github.io/categories/%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3/"/>
+    
+    
+      <category term="算法" scheme="https://wangc1993.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="选择排序" scheme="https://wangc1993.github.io/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>算法图解之二分查找</title>
