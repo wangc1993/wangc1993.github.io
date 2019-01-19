@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangc1993.github.io/"/>
-  <updated>2019-01-18T02:55:05.318Z</updated>
+  <updated>2019-01-19T07:18:53.537Z</updated>
   <id>https://wangc1993.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法图解之散列表</title>
+    <link href="https://wangc1993.github.io/2019/01/19/15/"/>
+    <id>https://wangc1993.github.io/2019/01/19/15/</id>
+    <published>2019-01-19T07:09:01.000Z</published>
+    <updated>2019-01-19T07:18:53.537Z</updated>
+    
+    <content type="html"><![CDATA[<p>数组和链表都被直接映射到内存，但散列表更复杂，它使用散列函数来确定元素的存储位置。在你将学习的复杂数据结构中，散列表可能是最有用的，也被称为散列映射、映射、字典和关联数组。</p><p>散列表的<strong>速度很快</strong>。你可以立即获取数组中的元素，而散列表也使用数组来存储数据，因此其获取元素的速度与数组一样快。<br>你可能根本不需要自己去实现散列表，<strong>任一优秀的语言都提供了散列表实现</strong>。Python提供的散列表实现为字典，你可使用函数dict来创建散列表。</p><p>总结一下，散列表适合用于：</p><ol><li>模拟<strong>映射关系</strong>；</li><li><strong>防止重复</strong>；</li><li><strong>缓存/记住数据</strong>，以免服务器再通过处理来生成它们。</li></ol><p><strong>冲突：两个键映射到同一个位置。</strong><br>最简单的办法如下：如果两个键映射到了同一个位置，就在这个位置存储一个链表。但是当要存储的键都是以a开头，那么会导致只有一个位置上有值，且这个链表会很长，散列表的速度回很慢。</p><p>引出：</p><ol><li>散列函数很重要。前面的散列函数将所有的键都映射到一个位置，而最理想的情况是，散列函数将键均匀地映射到散列表的不同位置。</li><li>如果散列表存储的链表很长，散列表的速度将急剧下降。然而，如果使用的散列函数很好，这些链表就不会很长！</li></ol><p>性能：<strong>需要避免冲突</strong>。<br>方法：较低的填装因子；良好的散列函数。（一旦填装因子超过0.7，就该调整散列表的长度。）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;数组和链表都被直接映射到内存，但散列表更复杂，它使用散列函数来确定元素的存储位置。在你将学习的复杂数据结构中，散列表可能是最有用的，也被称为散列映射、映射、字典和关联数组。&lt;/p&gt;
+&lt;p&gt;散列表的&lt;strong&gt;速度很快&lt;/strong&gt;。你可以立即获取数组中的元素，而散列
+      
+    
+    </summary>
+    
+      <category term="算法图解" scheme="https://wangc1993.github.io/categories/%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法图解之快排</title>
+    <link href="https://wangc1993.github.io/2019/01/19/14/"/>
+    <id>https://wangc1993.github.io/2019/01/19/14/</id>
+    <published>2019-01-19T06:18:57.000Z</published>
+    <updated>2019-01-19T07:05:13.808Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="D-amp-C算法"><a href="#D-amp-C算法" class="headerlink" title="D&amp;C算法"></a>D&amp;C算法</h1><p>在讲快排之前首先需要先介绍一下D&amp;C算法。D&amp;C（divide and conquer），分而治之，一种著名的递归式问题解决方法。下面从几个例子来了解一下：</p><ol><li>假设你是农场主，有一小块（1680m*640m）土地。你要将这块地均匀地分成方块，且分出的方块要尽可能大。如何将一块地均匀地分成方块，并确保分出的方块是最大的呢？使用D&amp;C策略！D&amp;C算法是递归的。使用D&amp;C解决问题的过程包括两个步骤：<br> （1）找出基线条件，这种条件必须尽可能简单。<br> （2）不断将问题分解（或者说缩小规模），直到符合基线条件。</li></ol><h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><p>快速排序也使用了D&amp;C。它的实现原理：以一个为基准，将数组分为两部分，再依次将拆分的部分再进行取基准、分组，以此类推。</p><h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><div align="center"><img src="/2019/01/19/14/1.png"></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;D-amp-C算法&quot;&gt;&lt;a href=&quot;#D-amp-C算法&quot; class=&quot;headerlink&quot; title=&quot;D&amp;amp;C算法&quot;&gt;&lt;/a&gt;D&amp;amp;C算法&lt;/h1&gt;&lt;p&gt;在讲快排之前首先需要先介绍一下D&amp;amp;C算法。D&amp;amp;C（divide an
+      
+    
+    </summary>
+    
+      <category term="算法图解" scheme="https://wangc1993.github.io/categories/%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3/"/>
+    
+    
+      <category term="算法" scheme="https://wangc1993.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="快速排序" scheme="https://wangc1993.github.io/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>算法图解之递归</title>
