@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangc1993.github.io/"/>
-  <updated>2019-01-20T14:01:44.992Z</updated>
+  <updated>2019-01-21T06:58:54.594Z</updated>
   <id>https://wangc1993.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法图解之狄克斯特拉算法</title>
+    <link href="https://wangc1993.github.io/2019/01/21/17/"/>
+    <id>https://wangc1993.github.io/2019/01/21/17/</id>
+    <published>2019-01-21T02:44:06.000Z</published>
+    <updated>2019-01-21T06:58:54.594Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><p>要找出最快的路径。</p><h1 id="狄克斯特拉算法"><a href="#狄克斯特拉算法" class="headerlink" title="狄克斯特拉算法"></a>狄克斯特拉算法</h1><p>下面来看看能否找到耗时更短的路径！狄克斯特拉算法包含4个步骤：<br>(1) 找出“最便宜”的节点，即可在最短时间内到达的节点。<br>(2) 更新该节点的邻居的开销，其含义将稍后介绍。<br>(3) 重复这个过程，直到对图中的每个节点都这样做了。<br>(4) 计算最终路径。</p><h1 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h1><ol><li><strong>找出最便宜的节点。</strong>你站在起点，不知道该前往节点A还是前往节点B。前往这两个节点都要多长时间呢？前往节点A需要6分钟，而前往节点B需要2分钟。至于前往其他节点，你还不知道需要多长时间。由于你还不知道前往终点需要多长时间，因此你假设为无穷大（这样做的原因你马上就会明白）。节点B是最近的——2分钟就能达到。<div style="display: flex; justify-content: center;"><img src="/2019/01/21/17/1.png" width="250"><img src="/2019/01/21/17/2.png" width="250"></div></li><li><strong>计算经节点B前往其各个邻居所需的时间。</strong>你刚找到了一条前往节点A的更短路径！直接前往节点A需要6分钟。但经由节点B前往节点A只需5分钟！对于节点B的邻居，如果找到前往它的更短路径，就更新其开销。在这里，你找到了：<br> 1）前往节点A的更短路径（时间从6分钟缩短到5分钟）；<br> 2）前往终点的更短路径（时间从无穷大缩短到7分钟）。 <div align="center"><img src="/2019/01/21/17/3.png"></div></li><li>重复上述步骤：<br>重复第一步 ：找出可在最短时间内前往的节点。你对节点B执行了第二步，除节点B外，可在最短时间内前往的节点是节点A。重复第二步 ：更新节点A的所有邻居的开销。你发现前往终点的时间为6分钟！你对每个节点都运行了狄克斯特拉算法（无需对终点这样做）。现在，你知道：<br> 1）前往节点B需要2分钟；<br> 2）前往节点A需要5分钟；<br> 3）前往终点需要6分钟。<div align="center" style="display: flex;"><img src="/2019/01/21/17/4.png"><img src="/2019/01/21/17/5.png"></div></li></ol><h1 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h1><p>在算法图解中有个换钢琴的案例。</p><h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><div style="display: flex; justify-content: center;"><img src="/2019/01/21/17/6.png"><img src="/2019/01/21/17/7.png"></div><br><div style="display: flex; justify-content: center;"><img src="/2019/01/21/17/8.png"><img src="/2019/01/21/17/9.png"></div><br><div style="display: flex; justify-content: center;"><img src="/2019/01/21/17/10.png"><img src="/2019/01/21/17/11.png"></div><br><div align="center"><img src="/2019/01/21/17/12.png"></div><br><div align="center"><img src="/2019/01/21/17/13.png"></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;应用场景&quot;&gt;&lt;a href=&quot;#应用场景&quot; class=&quot;headerlink&quot; title=&quot;应用场景&quot;&gt;&lt;/a&gt;应用场景&lt;/h1&gt;&lt;p&gt;要找出最快的路径。&lt;/p&gt;
+&lt;h1 id=&quot;狄克斯特拉算法&quot;&gt;&lt;a href=&quot;#狄克斯特拉算法&quot; class=&quot;heade
+      
+    
+    </summary>
+    
+      <category term="算法图解" scheme="https://wangc1993.github.io/categories/%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3/"/>
+    
+    
+      <category term="算法" scheme="https://wangc1993.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="狄克斯特拉算法" scheme="https://wangc1993.github.io/tags/%E7%8B%84%E5%85%8B%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>算法图解之广度优先搜索</title>
