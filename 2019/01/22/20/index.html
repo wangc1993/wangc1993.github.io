@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="算法,K最近邻算法,">
 
 
 
@@ -95,13 +95,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="carreyWang的博客空间">
-<meta property="og:url" content="https://wangc1993.github.io/tags/递归/index.html">
+<meta name="description" content="橙子还是柚子推荐系统（余弦相识度）2.1、特征提取2.2、回归2.3、挑选合适特征 机器学习3.1、OCR光学字符识别3.2、创建垃圾邮箱过滤器（算法：朴素贝叶斯分类器）3.3、预测股票市场">
+<meta name="keywords" content="算法,K最近邻算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法图解之K最近邻算法">
+<meta property="og:url" content="https://wangc1993.github.io/2019/01/22/20/index.html">
 <meta property="og:site_name" content="carreyWang的博客空间">
+<meta property="og:description" content="橙子还是柚子推荐系统（余弦相识度）2.1、特征提取2.2、回归2.3、挑选合适特征 机器学习3.1、OCR光学字符识别3.2、创建垃圾邮箱过滤器（算法：朴素贝叶斯分类器）3.3、预测股票市场">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-22T06:39:32.188Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="carreyWang的博客空间">
+<meta name="twitter:title" content="算法图解之K最近邻算法">
+<meta name="twitter:description" content="橙子还是柚子推荐系统（余弦相识度）2.1、特征提取2.2、回归2.3、挑选合适特征 机器学习3.1、OCR光学字符识别3.2、创建垃圾邮箱过滤器（算法：朴素贝叶斯分类器）3.3、预测股票市场">
 
 
 
@@ -131,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://wangc1993.github.io/tags/递归/">
+  <link rel="canonical" href="https://wangc1993.github.io/2019/01/22/20/">
 
 
 
 
 
-  <title>标签: 递归 | carreyWang的博客空间</title>
+  <title>算法图解之K最近邻算法 | carreyWang的博客空间</title>
   
 
 
@@ -160,7 +165,7 @@
     <canvas id="canvas"></canvas>
   </div> -->
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -306,52 +311,308 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>递归<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wangc1993.github.io/2019/01/22/20/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Carrey Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/carrey.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="carreyWang的博客空间">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/01/18/13/" itemprop="url">
-              
-                <span itemprop="name">算法图解之递归</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">算法图解之K最近邻算法</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-18T10:22:41+08:00" content="2019-01-18">
-          01-18
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-22T12:51:51+08:00">
+                2019-01-22
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法图解/" itemprop="url" rel="index">
+                    <span itemprop="name">算法图解</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/22/20/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/01/22/20/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/01/22/20/" class="leancloud_visitors" data-flag-title="算法图解之K最近邻算法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">当前热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span><span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  74
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="橙子还是柚子"><a href="#橙子还是柚子" class="headerlink" title="橙子还是柚子"></a>橙子还是柚子</h1><h1 id="推荐系统（余弦相识度）"><a href="#推荐系统（余弦相识度）" class="headerlink" title="推荐系统（余弦相识度）"></a>推荐系统（余弦相识度）</h1><p>2.1、特征提取<br>2.2、回归<br>2.3、挑选合适特征</p>
+<h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h1><p>3.1、OCR光学字符识别<br>3.2、创建垃圾邮箱过滤器（算法：朴素贝叶斯分类器）<br>3.3、预测股票市场</p>
 
       
     </div>
+    <div>
+      
+        <div>
+    
+    <div style="text-align:center;color: #ccc;font-size:14px;">-----------------------<span style="margin: 0 10px;">本文结束</span><i class="fa fa-paw"></i><span style="margin: 0 10px;">感谢您的阅读</span>-----------------------</div>
+    
+</div>
 
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Carrey Wang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Carrey Wang 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Carrey Wang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangc1993.github.io/2019/01/22/20/" title="算法图解之K最近邻算法">https://wangc1993.github.io/2019/01/22/20/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！感谢您的理解和支持！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+          
+            <a href="/tags/K最近邻算法/" rel="tag"><i class="fa fa-tag"></i> K最近邻算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/22/19/" rel="next" title="算法图解之动态规划">
+                <i class="fa fa-chevron-left"></i> 算法图解之动态规划
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -359,6 +620,17 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -379,8 +651,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -465,6 +746,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#橙子还是柚子"><span class="nav-number">1.</span> <span class="nav-text">橙子还是柚子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推荐系统（余弦相识度）"><span class="nav-number">2.</span> <span class="nav-text">推荐系统（余弦相识度）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#机器学习"><span class="nav-number">3.</span> <span class="nav-text">机器学习</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -628,6 +925,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -679,6 +980,30 @@
       </style>
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'wangc1993',
+            repo: 'gitment-blog',
+            
+            lang: "zh-Hans" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '8391aa6a4a2be452c24d59dc86cf10868988c4ab',
+            
+                client_id: 'bf5125f408abcfa620c8'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
