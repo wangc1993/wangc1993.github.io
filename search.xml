@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[无限级分类]]></title>
+    <url>%2F2019%2F07%2F03%2F21%2F</url>
+    <content type="text"><![CDATA[前情提要：当我们在做一些商城网站的时候，往往会有一种分类，叫做无限级分类，即：父类下面包含子类，子类又作为父类包含子类，以此类推。如下图所示（淘宝官网）。 原始数据的获取（一般都是从数据库取出）假设获取的数据为：123456789101112let arr = [ &#123;"id":1,"name":"手机数码","pid":0&#125;, &#123;"id":2,"name":"家用电器","pid":0&#125;, &#123;"id":3,"name":"美妆护肤","pid":0&#125;, &#123;"id":4,"name":"钟表珠宝","pid":0&#125;, &#123;"id":16,"name":"小米","pid":1&#125;, &#123;"id":17,"name":"华为","pid":1&#125;, &#123;"id":18,"name":"卡西欧","pid":4&#125;, &#123;"id":19,"name":"魅族","pid":1&#125;, &#123;"id":21,"name":"美的","pid":2&#125;, &#123;"id":24,"name":"红米","pid":16&#125;] 具体的分类代码123456789101112131415161718function tree(arr)&#123; /*首先将每个数据转化成对象的形式(方便寻找父级)*/ let map = &#123;&#125;; arr.forEach(function(item)&#123; map[item.id] = item; &#125;) /*分类*/ let cate = []; arr.forEach(function(item)&#123; let parent = map[item.pid]; if(parent)&#123; (parent.children || (parent.children = [])).push(item); &#125;else&#123; cate.push(item); &#125; &#125;); return cate;&#125; 输出分类数组123456789101112131415161718192021222324252627282930313233343536373839404142434445[&#123; "id": 1, "name": "手机数码", "pid": 0, "children": [&#123; "id": 16, "name": "小米", "pid": 1, "children": [&#123; "id": 24, "name": "红米", "pid": 16 &#125;] &#125;, &#123; "id": 17, "name": "华为", "pid": 1 &#125;, &#123; "id": 19, "name": "魅族", "pid": 1 &#125;]&#125;, &#123; "id": 2, "name": "家用电器", "pid": 0, "children": [&#123; "id": 21, "name": "美的", "pid": 2 &#125;]&#125;, &#123; "id": 3, "name": "美妆护肤", "pid": 0&#125;, &#123; "id": 4, "name": "钟表珠宝", "pid": 0, "children": [&#123; "id": 18, "name": "卡西欧", "pid": 4 &#125;]&#125;]]]></content>
+      <categories>
+        <category>js无限级分类</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>分类</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[算法图解之K最近邻算法]]></title>
     <url>%2F2019%2F01%2F22%2F20%2F</url>
     <content type="text"><![CDATA[橙子还是柚子推荐系统（余弦相识度）2.1、特征提取2.2、回归2.3、挑选合适特征 机器学习3.1、OCR光学字符识别3.2、创建垃圾邮箱过滤器（算法：朴素贝叶斯分类器）3.3、预测股票市场]]></content>
